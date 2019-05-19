@@ -1,0 +1,23 @@
+{
+	"data": [{
+		"coursetype": "graduate programmes",
+		"coursename": "system analysis",
+		"degreetype": "graduaten diploma"
+	}, {
+		"coursetype": "graduate programmes",
+		"coursename": "enterprise business analytics",
+		"degreetype": "master of technology"
+	}, {
+		"coursetype": "graduate programmes",
+		"coursename": "digital leadership",
+		"degreetype": "master of technology"
+	}, {
+		"coursetype": "graduate programmes",
+		"coursename": "intelligent system",
+		"degreetype": "master of technology"
+	}, {
+		"coursetype": "graduate programmes",
+		"coursename": "software engineering",
+		"degreetype": "master of technology"
+	}]
+}
