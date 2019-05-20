@@ -2,22 +2,32 @@
 	"data": [{
 		"coursetype": "graduate programmes",
 		"coursename": "system analysis",
-		"degreetype": "graduaten diploma"
+		"degreetype": "graduaten diploma",
+		"durationyear":{"fulltime":"1 year"},
+		"durationsemester":{"fulltime":"2 semesters"}
 	}, {
 		"coursetype": "graduate programmes",
 		"coursename": "enterprise business analytics",
-		"degreetype": "master of technology"
+		"degreetype": "master of technology",
+		"duration":{"fulltime":"1 year","parttime":"2 years"},
+		"durationsemester":{"fulltime":"2 semesters","parttime":"4 semesters"}
 	}, {
 		"coursetype": "graduate programmes",
 		"coursename": "digital leadership",
-		"degreetype": "master of technology"
+		"degreetype": "master of technology",
+		"duration":{"fulltime":"N.A.","parttime":"2 years"},
+		"durationsemester":{"fulltime":"N.A.","parttime":"4 semesters"}
 	}, {
 		"coursetype": "graduate programmes",
 		"coursename": "intelligent system",
-		"degreetype": "master of technology"
+		"degreetype": "master of technology",
+		"duration":{"fulltime":"1 year","parttime":"2 years"},
+		"durationsemester":{"fulltime":"2 semesters","parttime":"4 semesters"}
 	}, {
 		"coursetype": "graduate programmes",
 		"coursename": "software engineering",
-		"degreetype": "master of technology"
+		"degreetype": "master of technology",
+		"duration":{"fulltime":"1 year","parttime":"2 years"},
+		"durationsemester":{"fulltime":"2 semesters","parttime":"4 semesters"}
 	}]
 }
