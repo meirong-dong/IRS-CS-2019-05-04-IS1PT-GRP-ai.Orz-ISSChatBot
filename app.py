@@ -3,74 +3,51 @@ import requests
 import json
 
 app = Flask(__name__)
-## TODO: STEP 1 
-APIKEY = "??" # Place your API KEY Here... 
-#"8a81d247d650cb16469c4ba3ceb7d265"
+## TODO: STEP 1
 
-# **********************
-# UTIL FUNCTIONS : START
-# **********************
-
-def getjson(url):
-    resp =requests.get(url)
-    return resp.json()
-
-def getWeatherInfo(location):
-    API_ENDPOINT = f"http://api.openweathermap.org/data/2.5/weather?APPID={APIKEY}&q={location}"
-    data = getjson(API_ENDPOINT)
-    code = data["cod"]
-    if code == 200:
-        return data["weather"][0]["description"]
-
-# **********************
-# UTIL FUNCTIONS : END
-# **********************
-
-# *****************************
-# Intent Handlers funcs : START
-# *****************************
-
-## TODO Step 3:
-def getWeatherIntentHandler(req):
-    """
-    Get location parameter from dialogflow and call the util function `getWeatherInfo` to get weather info
-    """
-    # HINT: req.get("queryResult").get("parameters").get("some-example-parameter")
-
-    location = "??" #write code here
-    
-    location = "??" # Make sure location is lower case
-
-    # Call the getWeatherInfo function with `location` as input, and store the result in `info`
-    info = "??"
-    
-    return f"Currently in {location} , its {info}"
 
 # ***************************
 # Intent Handlers funcs : END
 # ***************************
 
-## Decision Table ##
-def getDecisionTree(coursename):
+## Decision Table Filter Course Name ##
+def getCourseNameTree(coursename):
+    courselist = []
     with open("s.json","r") as f:
         temp = json.loads(f.read())
         data = temp["data"]
     for course in data:
-        if course["coursename"] == coursename:
-            return True
-    return False
+        if coursename in course["coursename"]:
+            courselist.append(course["coursename"])
+    return courselist
 ## end ##
 
-def getCourseDuration(coursename):
+def getCourseTypeTree(coursename):
     with open("s.json","r") as f:
         temp = json.loads(f.read())
         data = temp["data"]
     for course in data:
-        if course["coursename"] == coursename:
+        if coursename in course["coursename"]:
             coursetype = course["coursetype"]
             return coursetype
     return "Something wrong ..."
 
+def getGraduateTypeTree(anyname):
+    courselist = []
+    resp_text = "We have the following courses which are "+anyname+" courses:\n"
+    with open("s.json","r") as f:
+        temp = json.loads(f.read())
+        data = temp["data"]
+    for course in data:
+        if anyname in course["coursetype"]:
+            courselist.append(course["coursename"])
+    if not courselist:
+        return False,"Next Step"
+    else:
+        for item in courselist:
+            resp_text = resp_text+item+", "
+        resp_text=resp_text+"\nPlease type in the course name for more detrails."
+        return True,resp_text
 
 # *****************************
 # WEBHOOK MAIN ENDPOINT : START
@@ -79,20 +56,26 @@ def getCourseDuration(coursename):
 def webhook():
    req = request.get_json(silent=True, force=True)
    intent_name = req["queryResult"]["intent"]["displayName"]
-   
-   ## TODO: STEP 2 
+
+   ## TODO: STEP 2
    # Write your code here..
    # write some if/else to check for the correct intent name.
    # Write code to call the getWeatherIntentHandler function with appropriate input
-   
+
    if intent_name == "ISSCourseIntent" : ##
         course_name = req["queryResult"]["parameters"]["coursename"].lower()
-        #respose_text = "Yes,"+course_name+"."
-        if getDecisionTree(course_name):
-            #respose_text = "Yes, we have "+course_name+"."
-            respose_text = "Yes, we have "+course_name+". And it's a "+getCourseDuration(course_name)+"."
+        any_name = req["queryResult"]["parameters"]["graduatetype"].lower()
+
+        result1,resp = getGraduateTypeTree(any_name)
+        if result1:
+            respose_text = resp
         else:
-            respose_text = "Sorry, we don't have "+course_name+" so far." ## Call your getWeatherIntentHandler with req object as input. 
+            if not getCourseNameTree(any_name):
+                respose_text = "Next Step"
+            else:
+                respose_text = "Yes, we have the following course which you may want have interested in:\n"
+                for item in getCourseNameTree(any_name):
+                    respose_text = respose_text + item +" and it's a "+getCourseTypeTree(item)+".\n"
    else:
         respose_text = "No intent matched here"
    # Branching ends here
