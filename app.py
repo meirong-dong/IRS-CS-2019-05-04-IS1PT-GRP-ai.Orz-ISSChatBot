@@ -71,7 +71,7 @@ def webhook():
             respose_text = resp
         else:
             if not getCourseNameTree(any_name):
-                respose_text = "Next Step"
+                respose_text = "Please refer to the NUS ISS offical website."
             else:
                 respose_text = "Yes, we have the following course which you may want have interested in:\n"
                 for item in getCourseNameTree(any_name):
