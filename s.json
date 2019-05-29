@@ -51,5 +51,29 @@
 		"degreetype": "certification",
 		"duration":{"fulltime":" ","parttime":"5 months"},
 		"durationsemester":{"fulltime":" ","parttime":""}
+	}, {
+		"coursetype": "executive education",
+		"coursename": "cybersecurity",
+		"degreetype": "training course",
+		"duration":{"fulltime":" ","parttime":"12 days"},
+		"durationsemester":{"fulltime":" ","parttime":""}
+	}, {
+		"coursetype": "executive education",
+		"coursename": "digital agility",
+		"degreetype": "training course",
+		"duration":{"fulltime":" ","parttime":"4 months"},
+		"durationsemester":{"fulltime":" ","parttime":""}
+	}, {
+		"coursetype": "executive education",
+		"coursename": "digital innovation & design",
+		"degreetype": "training course",
+		"duration":{"fulltime":" ","parttime":"4 months"},
+		"durationsemester":{"fulltime":" ","parttime":""}
+	}, {
+		"coursetype": "executive education",
+		"coursename": "smart health leadership",
+		"degreetype": "training course",
+		"duration":{"fulltime":" ","parttime":"1 months"},
+		"durationsemester":{"fulltime":" ","parttime":""}
 	}]
 }
