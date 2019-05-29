@@ -17,8 +17,8 @@ For Windows
 ngrok.exe http 5000
 ```
 
-**Remember to update the ngrok tunnel to dialogflow agent.**
-
+Remember to update the ngrok tunnel to dialogflow agent.**
+Remember to update the iframe src from in /templates/index.html with the url in "Integration" web demo.
 ## Install Dependencies
 ```
 pip install -r requirements.txt
