@@ -28,10 +28,10 @@
 		"duration":{"fulltime":"1 year","parttime":"2 years"},
 		"durationsemester":{"fulltime":"2 semesters","parttime":"4 semesters"}
 	}, {
-		"coursetype": "graduate programme",
-		"coursename": "software engineering",
-		"degreetype": "master of technology",
-		"duration":{"fulltime":"1 year","parttime":"2 years"},
-		"durationsemester":{"fulltime":"2 semesters","parttime":"4 semesters"}
+		"coursetype": "stackable programme",
+		"coursename": "data science",
+		"degreetype": "certification",
+		"duration":{"fulltime":" ","parttime":"4 months"},
+		"durationsemester":{"fulltime":" ","parttime":""}
 	}]
 }
