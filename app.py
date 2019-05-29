@@ -1,4 +1,5 @@
 from flask import Flask, request, make_response, jsonify
+from flask import render_template
 import requests
 import json
 
@@ -86,6 +87,9 @@ def webhook():
 # ***************************
 # WEBHOOK MAIN ENDPOINT : END
 # ***************************
+@app.route('/')
+def hello_world(name=""):
+    return render_template('index.html', name=name)
 
 if __name__ == '__main__':
    app.run(debug=True, host='0.0.0.0', port=5000)

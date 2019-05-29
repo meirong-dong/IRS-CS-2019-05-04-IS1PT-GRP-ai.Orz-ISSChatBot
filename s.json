@@ -33,5 +33,23 @@
 		"degreetype": "certification",
 		"duration":{"fulltime":" ","parttime":"4 months"},
 		"durationsemester":{"fulltime":" ","parttime":""}
+	}, {
+		"coursetype": "stackable programme",
+		"coursename": "digital solutions development",
+		"degreetype": "certification",
+		"duration":{"fulltime":" ","parttime":"209 days"},
+		"durationsemester":{"fulltime":" ","parttime":""}
+	}, {
+		"coursetype": "stackable programme",
+		"coursename": "artifical intelligence",
+		"degreetype": "certification",
+		"duration":{"fulltime":" ","parttime":"5 months"},
+		"durationsemester":{"fulltime":" ","parttime":""}
+	}, {
+		"coursetype": "stackable programme",
+		"coursename": "smart systems & platforms",
+		"degreetype": "certification",
+		"duration":{"fulltime":" ","parttime":"5 months"},
+		"durationsemester":{"fulltime":" ","parttime":""}
 	}]
 }
