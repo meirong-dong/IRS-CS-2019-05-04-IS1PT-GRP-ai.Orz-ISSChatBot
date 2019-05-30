@@ -41,7 +41,8 @@ def getGraduateTypeTree(anyname):
         data = temp["data"]
     for course in data:
         if anyname in course["coursetype"]:
-            courselist.append(course["coursename"])
+            for coursename in course["coursename"]:
+                courselist.append(coursename)
     if not courselist:
         return False,"Next Step"
     else:
@@ -50,6 +51,36 @@ def getGraduateTypeTree(anyname):
         resp_text=resp_text+"\nPlease type in the course name for more detrails."
         return True,resp_text
 
+def getCourseDurationYear(coursename):
+    with open("s.json","r") as f:
+        temp = json.loads(f.read())
+        data = temp["data"]
+    for course in data:
+        if coursename in course["coursename"]:
+            durationyear = course["durationyear"]
+            return json.dumps(durationyear)
+    return "Something wrong ..."
+
+def getCourseDurationSemester(coursename):
+    with open("s.json","r") as f:
+        temp = json.loads(f.read())
+        data = temp["data"]
+    for course in data:
+        if coursename in course["coursename"]:
+            durationsemester = course["durationsemester"]
+            return json.dumps(durationsemester)
+    return "Something wrong ..."
+
+def getCourseFee(coursename):
+    with open("s.json","r") as f:
+        temp = json.loads(f.read())
+        data = temp["data"]
+    for course in data:
+        if coursename in course["coursename"]:
+            fee = course["fee"]
+            return json.dumps(fee)
+    return "Something wrong ..."
+
 # *****************************
 # WEBHOOK MAIN ENDPOINT : START
 # *****************************
@@ -57,6 +88,7 @@ def getGraduateTypeTree(anyname):
 def webhook():
    req = request.get_json(silent=True, force=True)
    intent_name = req["queryResult"]["intent"]["displayName"]
+   print(req)
 
    ## TODO: STEP 2
    # Write your code here..
@@ -64,8 +96,8 @@ def webhook():
    # Write code to call the getWeatherIntentHandler function with appropriate input
 
    if intent_name == "ISSCourseIntent" : ##
-        course_name = req["queryResult"]["parameters"]["coursename"].lower()
-        any_name = req["queryResult"]["parameters"]["graduatetype"].lower()
+        any_name = req["queryResult"]["parameters"]["coursename"].lower()
+        #any_name = req["queryResult"]["parameters"]["graduatetype"].lower()
 
         result1,resp = getGraduateTypeTree(any_name)
         if result1:
@@ -74,9 +106,27 @@ def webhook():
             if not getCourseNameTree(any_name):
                 respose_text = "Please refer to the NUS ISS offical website."
             else:
-                respose_text = "Yes, we have the following course which you may want have interested in:\n"
-                for item in getCourseNameTree(any_name):
-                    respose_text = respose_text + item +" and it's a "+getCourseTypeTree(item)+".\n"
+                respose_text = "Yes, we have the course :\n" + any_name + " and it's a " + getCourseTypeTree(any_name) + ".\n"
+                #for item in getCourseNameTree(any_name):
+                    #respose_text = respose_text + item +" and it's a "+getCourseTypeTree(item)+".\n"
+   elif intent_name == "ISSCourseDurantion" :
+       any_name = req["queryResult"]["parameters"]["coursename"].lower()
+
+       resp1 = getCourseDurationYear(any_name)
+       durationYear = json.loads(resp1)
+       resp2 = getCourseDurationSemester(any_name)
+       durationSemester = json.loads(resp2)
+
+       if resp1 and resp2:
+           respose_text = "The Full-time Program is " + durationYear["fulltime"] + " and " + durationSemester["fulltime"] + "."
+           respose_text =  respose_text + " The Part-time Program is " + durationYear["parttime"] + " and " + durationSemester["parttime"] + "."
+   elif intent_name == "ISSCourseFee" :
+       any_name = req["queryResult"]["parameters"]["coursename"].lower()
+
+       resp3 = getCourseFee(any_name)
+       fee = json.loads(resp3)
+       if resp3:
+           respose_text = "The Full-time Program fee for Singaporean is" + fee["fulltime"]["singaporean"] + ". For SPR is " + fee["fulltime"]["singapore permanent resident"] + ". For International Student is " + fee["fulltime"]["international student"] + "."
    else:
         respose_text = "No intent matched here"
    # Branching ends here
