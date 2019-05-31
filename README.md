@@ -5,7 +5,7 @@
 ## SECTION 1 : PROJECT TITLE
 ## ISS Chatbot
 
-<img src="https://github.com/ddgone2far/IRS-CS-2019-05-04-IS1PT-GRP-ai.Orz-ISSChatBot/blob/master/readme_image.jpg"
+<img src="https://github.com/ddgone2far/IRS-CS-2019-05-04-IS1PT-GRP-ai.Orz-ISSChatBot/blob/master/cover_image.jpg"
      style="float: left; margin-right: 0px;" />
   
 Image by <a href="https://pixabay.com/users/ar130405-423602/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2082630">ar130405</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2082630">Pixabay</a>
