@@ -3,7 +3,7 @@
 ---
 
 ## SECTION 1 : PROJECT TITLE
-## Nurse Rostering Optimization
+## ISS Chatbot
 
 <img src="https://github.com/ddgone2far/IRS-CS-2019-05-04-IS1PT-GRP-ai.Orz-ISSChatBot/blob/master/readme_image.jpg"
      style="float: left; margin-right: 0px;" />
@@ -12,11 +12,7 @@ Image by <a href="https://pixabay.com/users/ar130405-423602/?utm_source=link-att
   
 ---
 ## SECTION 2 : EXECUTIVE SUMMARY
-An important aspect of hospital operations in Singapore is the effective scheduling of nurses in various wards, which is vital for the hospitals’ patients to receive timely care from the nurses with the necessary skill sets. The objective is to balance operational costs and safe patient care needs while maximizing the degree to which nurses’ request are met.
-
-However, the scheduling of the nurses’ roster is very time-consuming and challenging due to the need to balance the intensive demands of healthcare and the well-being of nurses. In addition, due to the dynamic nature of the workload and unforeseen circumstances, rescheduling is also very common.
-
-Our project focuses on taking the chore out of the painstaking process of scheduling with the objective of reducing the time taken to achieve the best possible schedule in a highly repeatable manner.
+In this project, we aim to design and train a chatbot based on Google powered Dialogflow to automatically handle users’ general enquiries about Institute of System Sciences (ISS) at National University of Singapore (NUS).The main objectives are to increase the efficiency of information retrieval and to provide more human-like conversational experiences.
 
 
 Our team: ai.Orz: comprising of 6 members: Dai Yirui, Dong Meirong, Gu Lijian, Guo Feng, Wong Yoke Keong, Zhang Le are from different areas including financial services, healthcare, cloud, software engineering. We hope to deliver a widely used platform which can bring core-value to hospitals, helping hospitals to do digital transformation, improve efficiencies, lower operational costs and integrate solution with enterprises' existing systems.
@@ -37,18 +33,18 @@ Our team: ai.Orz: comprising of 6 members: Dai Yirui, Dong Meirong, Gu Lijian, G
 ---
 ## SECTION 4 : VIDEO OF SYSTEM MODELLING & USE CASE DEMO
 
-[![Demo Video](https://img.youtube.com/vi/mshz5WYBkkw/maxresdefault.jpg)](https://youtu.be/mshz5WYBkkw)
+[![Demo Video](https://img.youtube.com/vi/aFSoMvsbjpU/maxresdefault.jpg)](https://youtu.be/aFSoMvsbjpU)
 
 ---
 ## SECTION 5 : USER GUIDE
 
 Please refer to the User Guide below for detailed instructions.
 
-User Guide Download Link : <https://github.com/guofeng201507/IRS-RS-2019-03-09-IS1PT-GRP-ai.Orz-NurseRostering/blob/master/UserGuide/NUS%20ISS%20Reasoning%20Systems%20Group%20Project%20(Spring%20Boot)%20User%20Guide.pdf>
+User Guide Download Link : <https://github.com/ddgone2far/IRS-CS-2019-05-04-IS1PT-GRP-ai.Orz-ISSChatBot/blob/master/UserGuide/NUS_ISS_Cognitive_Systems_Group_Project_User_Guide.pdf>
 
 ---
 ## SECTION 6 : PROJECT REPORT
 
 Please download the project report from the link below.
 
-Final Report Download Link : <https://github.com/guofeng201507/IRS-RS-2019-03-09-IS1PT-GRP-ai.Orz-NurseRostering/blob/master/ProjectReport/NUS%20ISS%20Reasoning%20System%20Group%20Project%20Final%20Report.pdf>
+Final Report Download Link : <https://github.com/ddgone2far/IRS-CS-2019-05-04-IS1PT-GRP-ai.Orz-ISSChatBot/blob/master/ProjectReport/NUS_ISS_Cognitive_System_Group_Project_Final_Report.pdf>
