@@ -23,12 +23,12 @@ Our team: ai.Orz: comprising of 6 members: Dai Yirui, Dong Meirong, Gu Lijian, G
 
 | Official Full Name  | Student ID (MTech Applicable)  | Work Items (Who Did What) | Email (Optional) |
 | :------------ |:---------------:| :-----| :-----|
-| Dai Yirui			| A0195167U | Project idea generation, implement and review DialogFlow intents, system training and integration and writing, testing execution | e0384798@u.nus.edu |
-| Dong Meirong		| A0195346W | Project idea generation, UI Design and DialogFlow intent implementation and testing, and Project Report Writing | e0384977@u.nus.edu |
-| Gu Lijian			| A0195279L | Project idea generation, implement and review DialogFlow intents, demonstration execution, future enhancement prototyping, testing execution. | e0384910@u.nus.edu |
-| Guo Feng			| A0195173Y | Project idea generation, implement and review DialogFlow intents, Architecture design and unit testing, user guide writing| e0384804@u.nus.edu |
-| Wong Yoke Keong	| A0195365U | Project idea generation, implement and review DialogFlow intents, project report writing and slides creation, user guide writing, testing execution. | e0384996@u.nus.edu |
-| Zhang Le 			| A0176176W | Project idea generation, implement and review API and Backend logics, future enhancement protptyping, testing execution. | e0224918@u.nus.edu |
+| Dai Yirui			|  | Project idea generation, implement and review DialogFlow intents, system training and integration and writing, testing execution |  |
+| Dong Meirong		|  | Project idea generation, UI Design and DialogFlow intent implementation and testing, and Project Report Writing |  |
+| Gu Lijian			|  | Project idea generation, implement and review DialogFlow intents, demonstration execution, future enhancement prototyping, testing execution. |  |
+| Guo Feng			| | Project idea generation, implement and review DialogFlow intents, Architecture design and unit testing, user guide writing| |
+| Wong Yoke Keong	|  | Project idea generation, implement and review DialogFlow intents, project report writing and slides creation, user guide writing, testing execution. |  |
+| Zhang Le 			|  | Project idea generation, implement and review API and Backend logics, future enhancement protptyping, testing execution. | |
 
 ---
 ## SECTION 4 : VIDEO OF SYSTEM MODELLING & USE CASE DEMO
